@@ -1,7 +1,7 @@
 import pytest
 from add_two_numbers import *
 
-@pytest.mark.skip()
+#@pytest.mark.skip()
 def test_add_two_numbers():
     l1 = Node(3)
     l1.next = Node(2)

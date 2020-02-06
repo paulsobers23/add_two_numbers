@@ -1,3 +1,12 @@
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+        
+    def __repr__(self):
+        return str(self.data)
+        
+        
 """
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
@@ -18,37 +27,12 @@ After you have the total of both nodes, create a reverse linked list from that n
 
 """
 
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
-        
-    def __repr__(self):
-        return str(self.data)
-        
-    
 def add_two_numbers(num1: Node, num2: Node) -> Node:
-    current1 = num1
-    current2 = num2
-    carry = 0
-    sum_list = Node()
-    current_sum = sum_list
-    
-    while current1 or current2 or carry:
-        total = current1.data + current2.data + carry
-        if total > 9:
-            carry = 1
-            total -= 10
-            current_sum.next = Node(total)
-        else:
-            carry = 0
-            current_sum.next = Node(total)
-            
-        current1 = current1.next
-        current2 = current2.next
-        current_sum = current_sum.next
-    
-    return sum_list.next
-        
-        
-        
+    carry_over = 1
+    list_one = Node()
+
+
+
+
+
+
